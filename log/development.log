@@ -81,3 +81,40 @@ Migrating to AddUsernameToUsers (20170115184557)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for ::1 at 2017-01-15 13:07:05 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (500.6ms)
+Completed 500 Internal Server Error in 561ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after " @import ": expected file to import (string or url()), was "“bootstrap-spro..."):
+    4:     <title>Soundgenie</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all' %>
+    8:     <%= javascript_include_tag 'application' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:17
+app/views/application/index.html.erb:7:in `_app_views_application_index_html_erb__1755630112710846315_70299642882600'
+app/controllers/application_controller.rb:5:in `index'
+  Rendering /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.0ms)
+  Rendering /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendering /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/brandenmiller/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (125.5ms)
+Started GET "/" for ::1 at 2017-01-15 13:18:57 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (8997.9ms)
+Completed 200 OK in 9073ms (Views: 9072.2ms | ActiveRecord: 0.0ms)
+
+
