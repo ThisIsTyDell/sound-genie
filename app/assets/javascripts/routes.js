@@ -10,12 +10,22 @@ angular
       .state('login', {
         url: '/login',
         templateUrl: 'views/login.html',
-        controller: 'AuthCtrl'
+        controller: 'AuthCtrl',
+        onEnter: function(Auth, $state){
+          Auth.currentUser().then(function(){
+            $state.go('home')
+          })
+        }
       })
       .state('register', {
         url: '/register',
         templateUrl: 'views/register.html',
-        controller: 'AuthCtrl'
+        controller: 'AuthCtrl',
+        onEnter: function(Auth, $state){
+          Auth.currentUser().then(function(){
+            $state.go('home')
+          })
+        }
       })
     $urlRouterProvider.otherwise('/home')
   })
