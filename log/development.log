@@ -585,3 +585,78 @@ Processing by Devise::SessionsController#create as JSON
 Completed 201 Created in 45ms (Views: 3.6ms | ActiveRecord: 20.2ms)
 
 
+Started GET "/" for ::1 at 2017-01-15 15:48:55 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (1352.7ms)
+Completed 200 OK in 1394ms (Views: 1389.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 15:48:59 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.46ms)
+Completed 201 Created in 50ms (Views: 11.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 15:49:17 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (279.4ms)
+Completed 200 OK in 299ms (Views: 298.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 15:49:20 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.55ms)
+Completed 201 Created in 50ms (Views: 6.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 15:50:32 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (666.6ms)
+Completed 200 OK in 698ms (Views: 696.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 15:50:35 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 201 Created in 52ms (Views: 3.7ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 15:58:03 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (3876.5ms)
+Completed 200 OK in 3929ms (Views: 3928.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 15:58:12 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.31ms)
+Completed 201 Created in 67ms (Views: 5.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 15:58:31 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (436.6ms)
+Completed 200 OK in 475ms (Views: 469.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 15:58:35 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (58.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (64.76ms)
+Completed 201 Created in 231ms (Views: 69.5ms | ActiveRecord: 58.1ms)
+
+
