@@ -171,3 +171,16 @@ Processing by Devise::SessionsController#create as JSON
 Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-15 14:49:30 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (3038.2ms)
+Completed 200 OK in 3070ms (Views: 3069.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 14:49:36 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
