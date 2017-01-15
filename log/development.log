@@ -132,3 +132,42 @@ Processing by ApplicationController#index as HTML
 Completed 200 OK in 1370ms (Views: 1238.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-01-15 14:45:41 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (1565.6ms)
+Completed 200 OK in 1604ms (Views: 1603.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 14:45:47 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:46:43 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (449.9ms)
+Completed 200 OK in 468ms (Views: 466.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 14:46:48 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 14:48:41 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (1605.4ms)
+Completed 200 OK in 1628ms (Views: 1627.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-15 14:48:48 -0600
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
