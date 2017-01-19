@@ -1,5 +1,7 @@
+function MainCtrl($scope, $rootScope, Auth){
+    
+};
+
 angular
   .module('myApp')
-  .controller('MainCtrl', function($scope, $rootScope, Auth){
-    
-  })
+  .controller('MainCtrl', MainCtrl);
