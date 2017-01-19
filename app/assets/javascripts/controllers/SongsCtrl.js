@@ -1,5 +1,13 @@
-function SongsCtrl($scope) {
-  $scope.test = "yo this is a test"
+function SongsCtrl(SongsService) {
+  var ctrl = this;
+
+  ctrl.songs = [];
+
+  SongsService
+    .getSongs()
+    .then(function(res) {
+      ctrl.songs = res.data
+    });
 
 }
 
