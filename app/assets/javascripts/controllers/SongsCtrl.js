@@ -1,4 +1,5 @@
 function SongsCtrl($scope) {
+  $scope.test = "yo this is a test"
 
 }
 
