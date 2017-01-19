@@ -27,5 +27,10 @@ angular
           })
         }
       })
+      .state('songs', {
+        url: '/songs',
+        templateUrl: 'views/songs.html',
+        controller: 'SongsCtrl'
+      })
     $urlRouterProvider.otherwise('/home')
   })
