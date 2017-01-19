@@ -1,4 +1,8 @@
-<div ng-controller="SongsCtrl" class="col-lg-8 col-lg-offset-2">
+<div ng-controller="SongsCtrl as ctrl" class="col-lg-8 col-lg-offset-2">
   <h1>My Songs</h1>
-  {{test}}
+
+  <ul>
+    <li ng-repeat="song in ctrl.songs">{{song.name}}</li>
+  </ul>
+
 </div>
