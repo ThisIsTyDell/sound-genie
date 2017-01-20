@@ -6,7 +6,13 @@ function AccountCtrl(AccountService) {
   AccountService
     .getAccount()
     .then(function(res) {
-      ctrl.account = res.data.account
+      ctrl.account = {
+        first_name: res.data.first_name,
+        last_name: res.data.last_name,
+        label: res.data.label_name,
+        credits: res.data.credits
+      }
+      debugger
     })
 
 }

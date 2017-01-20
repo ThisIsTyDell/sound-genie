@@ -2,7 +2,7 @@ function AccountService($http) {
 
   this.getAccount = function(id) {
 
-    return $http.get('users/' + id)
+    return $http.get('accounts/show')
   }
 }
  
