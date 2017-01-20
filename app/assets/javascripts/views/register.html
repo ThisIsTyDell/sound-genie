@@ -1,19 +1,46 @@
-<div class="col-lg-8 col-lg-offset-2">
-  <h1 class="centered-text">Register</h1>
-    <form ng-submit="register()">
-      <div class="form-group">
-        <input type="email" class="form-control" placeholder="Email" ng-model="user.email" autofocus>
+<div class="login-container">
+  <div class="login-box animated fadeInDown">
+    <div class="login-logo"></div>
+    <div class="login-body">
+      <div class="login-title"><strong>Welcome</strong>, Please register</div>
+      <form ng-submit="register()" class="form-horizontal">
+        <div class="form-group">
+          <div class="col-md-12">
+            <input type="email" class="form-control" placeholder="Email" ng-model="user.email" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-12">
+            <input type="username" class="form-control" placeholder="Username" ng-model="user.username" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-12">
+            <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-6">
+            <button ui-sref="login" class="btn btn-info btn-block">Have Account? Login</button>
+          </div>
+          <div class="col-md-6">
+            <input type="submit" class="btn btn-info btn-block" value="Log In">
+          </div>
+
+        </div>
+      </form>
+          
+    </div>
+    <div class="login-footer">
+      <div class="pull-left">
+          &copy; 2017 Sound Genie
       </div>
-      <div class="form-group">
-        <input type="username" class="form-control" placeholder="Username" ng-model="user.username" autofocus>
+      <div class="pull-right">
+        <a href="#">About</a> |
+        <a href="#">Privacy</a> |
+        <a href="#">Contact Us</a>
       </div>
-      <div class="form-group">
-        <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-      </div>
-      <input type="submit" class="btn btn-info" value="Log In">
-    </form>
-  <br>
-  <div class="panel-footer">
-    Already signed up? <a ui-sref="home.login">Log in here</a>.
+    </div>
   </div>
+  
 </div>
