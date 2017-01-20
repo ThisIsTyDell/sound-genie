@@ -13,8 +13,8 @@
           <div class="profile-image">
             <img src="assets/users/avatar.jpg" alt="John Doe"/>
           </div>
-          <div class="profile-data">
-            <div class="profile-data-name">{{user.account.first_name}} {{user.account.last_name}}</div>
+          <div class="profile-data" ng-controller="AccountCtrl as ctrl">
+            <div class="profile-data-name">{{ctrl.first_name}} {{ctrl.last_name}}</div>
             <div class="profile-data-title">Music Producer</div>
           </div>
           <div class="profile-controls">

@@ -1,18 +1,20 @@
 function AccountCtrl(AccountService) {
   var ctrl = this;
-
-  ctrl.account = {};
+  
+  ctrl.first_name = ''
+  ctrl.last_name = ''
+  ctrl.label_name = ''
+  ctrl.credits = ''
 
   AccountService
     .getAccount()
     .then(function(res) {
-      ctrl.account = {
-        first_name: res.data.first_name,
-        last_name: res.data.last_name,
-        label: res.data.label_name,
-        credits: res.data.credits
-      }
-    })
+      ctrl.first_name = res.data.first_name
+      ctrl.last_name = res.data.last_name
+      ctrl.label = res.data.label_name
+      ctrl.credits = res.data.credits
+      
+    });
 
 }
 
