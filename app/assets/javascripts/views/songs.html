@@ -1,8 +1,10 @@
-<div ng-controller="SongsCtrl as ctrl" class="col-lg-8 col-lg-offset-2">
-  <h1>My Songs</h1>
-
+<div ng-controller="SongsCtrl as ctrl">
+  <div class="page-title">                    
+    <h2><span class="fa fa-arrow-circle-o-left"></span> My Songs</h2>
+  </div>
+<div class="page-content-wrap body-full-height">
   <ul>
     <li ng-repeat="song in ctrl.songs">{{song.name}} - {{song.user.username}}</li>
   </ul>
-
+</div>
 </div>
