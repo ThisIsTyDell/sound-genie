@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'application#index'
 
   resources :songs, only: [:show, :index]
+  resources :users, only: [:show]
 
 end
