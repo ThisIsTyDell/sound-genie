@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'accounts/show'
+
   devise_for :users
   root 'application#index'
 
