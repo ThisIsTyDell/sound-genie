@@ -2522,3 +2522,4 @@ Migrating to CreateAccounts (20170120173021)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
