@@ -3,13 +3,23 @@
   <head>
     <title>Soundgenie</title>
     <%= csrf_meta_tags %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body ng-app="myApp" ng-controller="MainCtrl">
-    <nav-bar></nav-bar>
-    <ui-view></ui-view>
+    <div class="page-container">
+      <nav-bar></nav-bar>
+      <div class="page-content">
+        <div class="page-content-wrap">
+          <ui-view></ui-view>
+        </div>
+      </div>
+      <div class="footer">This footer will always be positioned at the bottom of the page, but <strong>not fixed</strong>.</div>
+    </div>
   </body>
 </html>
