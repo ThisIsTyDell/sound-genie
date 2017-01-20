@@ -15,7 +15,7 @@ function AuthCtrl($scope, $rootScope, Auth, $state){
   Auth.login($scope.user, config).then(function(user){
     $rootScope.user = user
     alert("You’re all signed in, " + user.username);
-    $state.go('home');
+    $state.go('songs');
   }, function(response){
     alert(response.data.error)
   });
