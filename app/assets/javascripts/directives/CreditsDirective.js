@@ -2,7 +2,6 @@ angular
   .module('myApp')
   .directive('availableCredits', function(){
     return {
-      template: '',
-      controller:
+      templateUrl: 'views/credits.html'
     }
   })
