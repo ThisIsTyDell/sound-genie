@@ -1,7 +1,7 @@
 function AccountCtrl(AccountService) {
   var ctrl = this;
 
-  ctrl.account = '';
+  ctrl.account = {};
 
   AccountService
     .getAccount()
@@ -12,7 +12,6 @@ function AccountCtrl(AccountService) {
         label: res.data.label_name,
         credits: res.data.credits
       }
-      debugger
     })
 
 }
