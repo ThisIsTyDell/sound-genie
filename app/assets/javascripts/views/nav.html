@@ -37,6 +37,9 @@
         <a ui-sref="songs"><span class="fa fa-desktop"></span> <span class="xn-text">My Songs</span></a>
       </li>
       <li ng-show="signedIn()">
+        <a ui-sref="settings"><span class="fa fa-desktop"></span> <span class="xn-text">Settings</span></a>
+      </li>
+      <li ng-show="signedIn()">
         <a ng-click="logout()"><span class="fa fa-desktop"></span> <span class="xn-text">Logout</span></a>
       </li>                                               
     </ul>
