@@ -42,5 +42,10 @@ angular
         templateUrl: 'views/settings/profile.html',
         controller: 'AccountCtrl'
       })
+      .state('settings.deactivate', {
+        url: '/deactivate',
+        templateUrl: 'views/settings/deleteProfile.html',
+        controller: 'AccountCtrl'
+      })
     $urlRouterProvider.otherwise('/home')
   })
