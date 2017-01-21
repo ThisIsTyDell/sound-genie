@@ -32,5 +32,15 @@ angular
         templateUrl: 'views/songs.html',
         controller: 'SongsCtrl'
       })
+      .state('settings', {
+        url: '/settings',
+        templateUrl: 'views/settings.html',
+        controller: 'AccountCtrl'
+      })
+      .state('settings.profile', {
+        url: '/profile',
+        templateUrl: 'views/settings/profile.html',
+        controller: 'AccountCtrl'
+      })
     $urlRouterProvider.otherwise('/home')
   })
