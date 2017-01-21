@@ -201,7 +201,8 @@ body {
 .page-container .page-content .page-content-wrap {
   float: left;
   width: 100%;
-  margin-left: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .page-container.page-container-wide .page-content {
   margin-left: 50px;
