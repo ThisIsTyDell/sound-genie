@@ -1,1 +1,71 @@
 <h2>Profile</h2>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <form class="form-horizontal">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>User</strong>Information</h3>
+          <ul class="panel-controls">
+            <li><a ui-sref="settings" class="panel-remove"><span class="fa fa-times"></span></a></li>
+          </ul>
+        </div>
+
+        <div class="panel-body">
+          <p>Update your information here</p>
+        </div>
+
+        <div class="panel-body">
+
+
+          <div class="form-group">
+              <label class="col-md-3 col-xs-12 control-label">First Name</label>
+              <div class="col-md-6 col-xs-12">                                            
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                  <input type="text" class="form-control"/>
+                </div>                                            
+                <span class="help-block">or Artist Name</span>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-md-3 col-xs-12 control-label">Last Name</label>
+              <div class="col-md-6 col-xs-12">                                            
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                  <input type="text" class="form-control"/>
+                </div>                                            
+                <span class="help-block">or Artist Name</span>
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Label Name</label>
+            <div class="col-md-6 col-xs-12">                                            
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                <input type="text" class="form-control"/>
+              </div>                                            
+              <span class="help-block"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Avatar</label>
+            <div class="col-md-6 col-xs-12">
+              <input type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+              <span class="help-block">Input type file</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-default">Clear Form</button>                                    
+          <button class="btn btn-primary pull-right">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
