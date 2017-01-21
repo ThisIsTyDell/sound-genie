@@ -3044,3 +3044,109 @@ Processing by SongsController#index as HTML
 Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 4.6ms)
 
 
+Started GET "/" for ::1 at 2017-01-20 20:35:23 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (3866.2ms)
+Completed 200 OK in 3900ms (Views: 3898.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-20 20:35:31 -0600
+Started GET "/accounts/show" for ::1 at 2017-01-20 20:35:31 -0600
+Processing by Devise::SessionsController#create as JSON
+Processing by AccountsController#show as HTML
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/songs" for ::1 at 2017-01-20 20:35:31 -0600
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Processing by SongsController#index as HTML
+[active_model_serializers] Rendered AccountSerializer with ActiveModelSerializers::Adapter::Attributes (2.36ms)
+[active_model_serializers]   [1m[36mSong Load (15.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 26.6ms | ActiveRecord: 0.8ms)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (40.13ms)
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Completed 201 Created in 67ms (Views: 30.4ms | ActiveRecord: 16.2ms)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.48ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/songs" for ::1 at 2017-01-20 20:35:31 -0600
+Processing by SongsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.89ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-01-20 20:35:36 -0600
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb
+  Rendered application/index.html.erb (1051.6ms)
+Completed 200 OK in 1074ms (Views: 1074.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in.json" for ::1 at 2017-01-20 20:35:40 -0600
+Started GET "/accounts/show" for ::1 at 2017-01-20 20:35:40 -0600
+Processing by Devise::SessionsController#create as JSON
+Processing by AccountsController#show as HTML
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered AccountSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+[active_model_serializers]   [1m[36mSong Load (14.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+Started GET "/songs" for ::1 at 2017-01-20 20:35:40 -0600
+Completed 200 OK in 43ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (22.61ms)
+Processing by SongsController#index as HTML
+Completed 201 Created in 45ms (Views: 12.2ms | ActiveRecord: 14.8ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/accounts/show" for ::1 at 2017-01-20 20:35:40 -0600
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Processing by AccountsController#show as HTML
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.74ms)
+[active_model_serializers] Rendered AccountSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/songs" for ::1 at 2017-01-20 20:35:40 -0600
+Started GET "/accounts/show" for ::1 at 2017-01-20 20:35:40 -0600
+Processing by SongsController#index as HTML
+Processing by AccountsController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mAccount Load (0.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered AccountSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+[active_model_serializers]   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
