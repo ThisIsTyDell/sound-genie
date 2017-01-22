@@ -1,4 +1,4 @@
-function AccountService($http) {
+function AccountService($http, $timeout) {
 
   first_name = ''
 
@@ -7,16 +7,22 @@ function AccountService($http) {
   }
 
   this.updateAccount = function(ctrl) {
-    $http({
-      method: 'PATCH',
-      dataType: 'json',
-      url: 'accounts/update',
-      data: { data: ctrl },
-      headers: {"Content-Type": "application/json"}
-    })
-    .success(function(ctrl) {
-      first_name = ctrl.first_name
-    })
+    return $http.patch('accounts/update', { data: ctrl }).then($timeout(this.getAccount, 1000))
+
+
+    //var accountData = ctrl
+    //$http({
+    //  method: 'PATCH',
+    //  dataType: 'json',
+    //  url: 'accounts/update',
+    //  data: { data: ctrl },
+    //  headers: {"Content-Type": "application/json"}
+    //})
+    //.success(function() {
+      
+      
+    //})
+    
   }
   
 }
