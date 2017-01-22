@@ -13,28 +13,12 @@ function AccountCtrl(AccountService, $http, $scope) {
       ctrl.last_name = res.data.last_name
       ctrl.label_name = res.data.label_name
       ctrl.credits = res.data.credits
-      
     });
 
   ctrl.submit = function() {
     AccountService
-      .updateAccount(ctrl);
+      .updateAccount(ctrl)
   }
-
-//  ctrl.submit = function() {
-//    $http({
-//      method: 'PATCH',
-//      dataType: 'json',
-//      url: 'accounts/update',
-//      data: { data: ctrl },
-//      headers: {"Content-Type": "application/json"}
-//    })
-//    .success(function(ctrl) {
-//
-//      $scope.first_name = ctrl.first_name
-//    })
-//  }
-
 }
 
 angular
