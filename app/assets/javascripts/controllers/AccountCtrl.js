@@ -1,4 +1,4 @@
-function AccountCtrl(AccountService) {
+function AccountCtrl(AccountService, $http) {
   var ctrl = this;
   
   ctrl.first_name = ''
@@ -15,6 +15,15 @@ function AccountCtrl(AccountService) {
       ctrl.credits = res.data.credits
       
     });
+
+  ctrl.submit = function() {
+    $http({
+      method: 'PATCH',
+      url: 'accounts/update',
+      data: {data: ctrl},
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+    })
+  }
 
 }
 

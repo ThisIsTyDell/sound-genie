@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'accounts/show'
+  patch 'accounts/update'
 
   devise_for :users
   root 'application#index'

@@ -4,6 +4,7 @@ function AccountService($http) {
 
     return $http.get('accounts/show')
   }
+  
 }
  
 angular
