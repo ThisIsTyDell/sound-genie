@@ -3,7 +3,7 @@ function AccountCtrl(AccountService, $http) {
   
   ctrl.first_name = ''
   ctrl.last_name = ''
-  ctrl.label_name = ''
+  ctrl.label = ''
   ctrl.credits = ''
 
   AccountService
@@ -19,9 +19,10 @@ function AccountCtrl(AccountService, $http) {
   ctrl.submit = function() {
     $http({
       method: 'PATCH',
+      dataType: 'json',
       url: 'accounts/update',
       data: {data: ctrl},
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      headers: {"Content-Type": "application/json"}
     })
   }
 
