@@ -3,7 +3,7 @@ function AccountCtrl(AccountService, $http) {
   
   ctrl.first_name = ''
   ctrl.last_name = ''
-  ctrl.label = ''
+  ctrl.label_name = ''
   ctrl.credits = ''
 
   AccountService
@@ -11,7 +11,7 @@ function AccountCtrl(AccountService, $http) {
     .then(function(res) {
       ctrl.first_name = res.data.first_name
       ctrl.last_name = res.data.last_name
-      ctrl.label = res.data.label_name
+      ctrl.label_name = res.data.label_name
       ctrl.credits = res.data.credits
       
     });
@@ -21,7 +21,7 @@ function AccountCtrl(AccountService, $http) {
       method: 'PATCH',
       dataType: 'json',
       url: 'accounts/update',
-      data: {data: ctrl},
+      data: { data: ctrl },
       headers: {"Content-Type": "application/json"}
     })
   }
