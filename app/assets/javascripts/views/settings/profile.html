@@ -1,6 +1,6 @@
 <h2>Profile</h2>
 
-<div class="row">
+<div class="row" ng-controller="AccountCtrl as ctrl">
   <div class="col-md-12">
 
     <form class="form-horizontal">
@@ -24,7 +24,7 @@
               <div class="col-md-6 col-xs-12">                                            
                 <div class="input-group input-group-lg">
                   <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                  <input type="text" class="form-control"/>
+                  <input type="text" class="form-control" ng-model="ctrl.first_name"/>
                 </div>                                            
                 <span class="help-block">or Artist Name</span>
               </div>
@@ -35,7 +35,7 @@
               <div class="col-md-6 col-xs-12">                                            
                 <div class="input-group input-group-lg">
                   <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                  <input type="text" class="form-control"/>
+                  <input type="text" class="form-control" ng-model="ctrl.last_name"/>
                 </div>                                            
                 <span class="help-block">or Artist Name</span>
               </div>
@@ -46,7 +46,7 @@
             <div class="col-md-6 col-xs-12">                                            
               <div class="input-group input-group-lg">
                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                <input type="text" class="form-control"/>
+                <input type="text" class="form-control" ng-model="ctrl.label"/>
               </div>                                            
               <span class="help-block"></span>
             </div>
