@@ -1,4 +1,4 @@
-function AccountCtrl(AccountService, $http) {
+function AccountCtrl(AccountService, $http, $scope) {
   var ctrl = this;
   
   ctrl.first_name = ''
@@ -23,6 +23,10 @@ function AccountCtrl(AccountService, $http) {
       url: 'accounts/update',
       data: { data: ctrl },
       headers: {"Content-Type": "application/json"}
+    })
+    .success(function(ctrl) {
+
+      $scope.first_name = ctrl.first_name
     })
   }
 
