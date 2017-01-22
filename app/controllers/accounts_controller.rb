@@ -11,7 +11,12 @@ class AccountsController < ApplicationController
 
   def update
     account = Account.find_by(user_id: current_user.id)
-    account.update(params[:AccountCtrl])
-    render json: account
+    account.update(params[:data])
+  end
+
+  private
+
+  def post_params
+    params.permit(:first_name, :last_name, :label_name, :credits)
   end
 end
