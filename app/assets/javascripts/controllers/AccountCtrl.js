@@ -17,18 +17,23 @@ function AccountCtrl(AccountService, $http, $scope) {
     });
 
   ctrl.submit = function() {
-    $http({
-      method: 'PATCH',
-      dataType: 'json',
-      url: 'accounts/update',
-      data: { data: ctrl },
-      headers: {"Content-Type": "application/json"}
-    })
-    .success(function(ctrl) {
-
-      $scope.first_name = ctrl.first_name
-    })
+    AccountService
+      .updateAccount(ctrl);
   }
+
+//  ctrl.submit = function() {
+//    $http({
+//      method: 'PATCH',
+//      dataType: 'json',
+//      url: 'accounts/update',
+//      data: { data: ctrl },
+//      headers: {"Content-Type": "application/json"}
+//    })
+//    .success(function(ctrl) {
+//
+//      $scope.first_name = ctrl.first_name
+//    })
+//  }
 
 }
 
