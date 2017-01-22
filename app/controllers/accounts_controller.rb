@@ -11,12 +11,12 @@ class AccountsController < ApplicationController
 
   def update
     account = Account.find_by(user_id: current_user.id)
-    account.update(params[:data])
+    account.update(post_params)
   end
 
   private
 
   def post_params
-    params.permit(:first_name, :last_name, :label_name, :credits)
+    params.require(:data).permit(:first_name, :last_name, :label_name, :credits, :account)
   end
 end
