@@ -1,4 +1,4 @@
 class SongSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :complete
   belongs_to :user
 end
