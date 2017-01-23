@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123030244) do
+ActiveRecord::Schema.define(version: 20170123201638) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "first_name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170123030244) do
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
+    t.boolean  "complete"
     t.index ["user_id"], name: "index_songs_on_user_id"
   end
 
