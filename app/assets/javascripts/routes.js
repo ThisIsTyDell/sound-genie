@@ -32,11 +32,6 @@ angular
         templateUrl: 'views/songs.html',
         controller: 'SongsCtrl'
       })
-      .state('upload', {
-        url: '/upload',
-        templateUrl: 'views/upload.html',
-        controller: 'SongsCtrl'
-      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'views/settings.html',
