@@ -12,6 +12,11 @@ function SongsCtrl(SongsService) {
       ctrl.songs = res.data
     });
 
+  ctrl.submit = function() {
+    SongsService
+      .createSong(ctrl)
+  }
+
 }
 
 angular
