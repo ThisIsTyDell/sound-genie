@@ -13,5 +13,5 @@ function AccountService($http, $timeout) {
 }
  
 angular
-    .module('myApp')
-    .service('AccountService', AccountService);
+  .module('myApp')
+  .service('AccountService', AccountService);
