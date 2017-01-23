@@ -1,6 +1,10 @@
 function SongsService($http) {
   this.getSongs = function() {
-    return $http.get('/songs');
+    return $http.get('songs');
+  }
+
+  this.createSong = function() {
+    return $http.post('songs', { data: ctrl })
   }
 }
 
