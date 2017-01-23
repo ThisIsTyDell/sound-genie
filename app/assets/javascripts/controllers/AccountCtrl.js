@@ -1,4 +1,4 @@
-function AccountCtrl(AccountService, $http) {
+function AccountCtrl(AccountService) {
   var ctrl = this;
   
   ctrl.first_name = ''
