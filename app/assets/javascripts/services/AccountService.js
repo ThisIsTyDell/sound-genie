@@ -1,6 +1,5 @@
 function AccountService($http, $timeout) {
-  var accountData
-
+  
   return {
     getAccount: function() {
       return $http.get('accounts/show')

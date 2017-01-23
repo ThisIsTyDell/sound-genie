@@ -1,12 +1,12 @@
 <h2>Profile</h2>
 
-<div class="row" ng-controller="AccountCtrl as ctrl">
+<div class="row" ng-controller="AccountCtrl as account">
   <div class="col-md-12">
 
-    <form class="form-horizontal" name="form" ng-submit="ctrl.submit()">
+    <form class="form-horizontal" name="form" ng-submit="account.submit()">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><strong>User</strong>Information for: {{ctrl.first_name}} {{ctrl.last_name}}</h3>
+          <h3 class="panel-title"><strong>User</strong>Information for: {{account.first_name}} {{account.last_name}}</h3>
           <ul class="panel-controls">
             <li><a ui-sref="settings" class="panel-remove"><span class="fa fa-times"></span></a></li>
           </ul>
@@ -25,7 +25,7 @@
                 <div class="input-group input-group-lg">
                   <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
             
-                  <input type="text" class="form-control" name="first_name" minlength="3" maxlength="20" required="required" ng-model="ctrl.first_name" />
+                  <input type="text" class="form-control" name="first_name" minlength="3" maxlength="20" required="required" ng-model="account.first_name" />
 
                 </div>                                            
                 <span class="help-block">or Artist Name</span>
@@ -50,7 +50,7 @@
               <div class="col-md-6 col-xs-12">                                            
                 <div class="input-group input-group-lg">
                   <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                  <input type="text" class="form-control" name="last_name" minlength="3" maxlength="20" required="required" ng-model="ctrl.last_name" />
+                  <input type="text" class="form-control" name="last_name" minlength="3" maxlength="20" required="required" ng-model="account.last_name" />
                 </div>                                            
                 <span class="help-block">or Artist Name</span>
                 <div ng-if="form.last_name.$touched">
@@ -72,7 +72,7 @@
             <div class="col-md-6 col-xs-12">                                            
               <div class="input-group input-group-lg">
                 <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
-                <input type="text" class="form-control" name="label_name" minlength="3" maxlength="30" required="required" ng-model="ctrl.label_name" />
+                <input type="text" class="form-control" name="label_name" minlength="3" maxlength="30" required="required" ng-model="account.label_name" />
               </div>                                            
               <span class="help-block"></span>
               <div ng-if="form.label_name.$touched">
