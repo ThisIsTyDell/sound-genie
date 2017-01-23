@@ -1,1 +1,83 @@
-upload.html
+<div class="page-content-wrap">
+<div class="row">
+  <div class="col-md-12">
+
+    <form class="form-horizontal" name="form" ng-submit="ctrl.submit()">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Upload</strong>Tracks</h3>
+          <ul class="panel-controls">
+            <li><a ui-sref="settings" class="panel-remove"><span class="fa fa-times"></span></a></li>
+          </ul>
+        </div>
+
+        <div class="panel-body">
+
+
+          <div class="form-group">
+              <label class="col-md-3 col-xs-12 control-label">Song Title</label>
+              <div class="col-md-6 col-xs-12">                                            
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+            
+                  <input type="text" class="form-control" name="first_name" minlength="3" maxlength="20" required="required" ng-model="ctrl.first_name" />
+
+                </div>                                            
+                <span class="help-block">help block</span>
+
+                <div ng-if="form.first_name.$touched">
+                  <div ng-if="form.first_name.$error.required">
+                      Song title is required!
+                  </div>
+                  <div ng-if="form.first_name.$error.minlength">
+                      Song title must be more than 3 characters!
+                  </div>
+                  <div ng-if="form.first_name.$error.maxlength">
+                      Song title must be less than 20 characters!
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          
+
+          <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Label Name</label>
+            <div class="col-md-6 col-xs-12">                                            
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                <input type="text" class="form-control" name="label_name" minlength="3" maxlength="30" required="required" ng-model="ctrl.label_name" />
+              </div>                                            
+              <span class="help-block"></span>
+              <div ng-if="form.label_name.$touched">
+                  <div ng-if="form.label_name.$error.required">
+                      Label name is required!
+                  </div>
+                  <div ng-if="form.label_name.$error.minlength">
+                      Label name must be more than 3 characters!
+                  </div>
+                  <div ng-if="form.label_name.$error.maxlength">
+                      Label name must be less than 20 characters!
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Song</label>
+            <div class="col-md-6 col-xs-12">
+              <input type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+              <span class="help-block">Upload Song</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel-footer">                            
+          <button class="btn btn-primary pull-right">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
