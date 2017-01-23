@@ -12,10 +12,17 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">Pending Tracks</h3>
+          <div class="form-group pull-right">
+            <label class="col-md-3 col-xs-12 control-label">Search</label>
+            <div class="input-group input-group-md">
+              <input class="form-control" type='text' ng-model="searchBox" />
+            </div>
+          </div>
         </div>
         <div class="panel-body">
           <div class="list-group border-bottom">
-            <a class="list-group-item" ng-repeat="song in ctrl.songs">{{song.name}}</a>
+            
+            <a class="list-group-item" ng-repeat="song in ctrl.songs | filter: searchBox">{{song.name}}</a>
           </div>
         </div>
       </div>
