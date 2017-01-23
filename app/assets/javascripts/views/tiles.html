@@ -1,13 +1,13 @@
-<div class="row" ng-controller="AccountCtrl as ctrl">
+<div class="row" ng-controller="SongsCtrl as ctrl">
 
-  <div class="col-md-3">                        
-    <a ui-sref="upload" class="tile tile-success tile-valign">Upload Tracks
+  <div class="col-md-3" >                        
+    <a ng-click="ctrl.toggle()" class="tile tile-success tile-valign">Upload Tracks
         <div class="informer informer-default dir-tr"><span class="fa fa-cloud"></span></div>
         <div class="informer informer-default dir-bl">Requires 1 Credit Per Track</div>
     </a>                                                    
   </div>
 
-  <div class="col-md-3">
+  <div class="col-md-3" ng-controller="AccountCtrl as ctrl">
     <div class="widget widget-primary widget-item-icon">
       <div class="widget-item-left">
         <span class="fa fa-money"></span>
@@ -33,6 +33,10 @@
         Need Help?
         <p>Contact Us</p>
     </a>                        
+  </div>
+
+  <div ng-show="ctrl.toggleUpload" class="row">
+    <upload></upload>
   </div>
   
 </div>
