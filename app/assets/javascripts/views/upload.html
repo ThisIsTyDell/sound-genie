@@ -20,19 +20,19 @@
                 <div class="input-group input-group-lg">
                   <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
             
-                  <input type="text" class="form-control" name="first_name" minlength="3" maxlength="20" required="required" ng-model="ctrl.first_name" />
+                  <input type="text" class="form-control" name="name" minlength="3" maxlength="20" required="required" ng-model="ctrl.name" />
 
                 </div>                                            
                 <span class="help-block">help block</span>
 
-                <div ng-if="form.first_name.$touched">
-                  <div ng-if="form.first_name.$error.required">
+                <div ng-if="form.name.$touched">
+                  <div ng-if="form.name.$error.required">
                       Song title is required!
                   </div>
-                  <div ng-if="form.first_name.$error.minlength">
+                  <div ng-if="form.name.$error.minlength">
                       Song title must be more than 3 characters!
                   </div>
-                  <div ng-if="form.first_name.$error.maxlength">
+                  <div ng-if="form.name.$error.maxlength">
                       Song title must be less than 20 characters!
                   </div>
                 </div>
