@@ -32,6 +32,11 @@ angular
         templateUrl: 'views/songs.html',
         controller: 'SongsCtrl'
       })
+      .state('upload', {
+        url: '/upload',
+        templateUrl: 'views/upload.html',
+        controller: 'SongsCtrl'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'views/settings.html',
@@ -47,5 +52,6 @@ angular
         templateUrl: 'views/settings/deleteProfile.html',
         controller: 'AccountCtrl'
       })
+
     $urlRouterProvider.otherwise('/home')
   })
