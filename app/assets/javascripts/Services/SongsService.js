@@ -3,7 +3,7 @@ function SongsService($http) {
     return $http.get('songs');
   }
 
-  this.createSong = function() {
+  this.createSong = function(ctrl) {
     return $http.post('songs', { data: ctrl })
   }
 }
