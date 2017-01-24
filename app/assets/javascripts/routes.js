@@ -32,6 +32,16 @@ angular
         templateUrl: 'views/songs.html',
         controller: 'SongsCtrl'
       })
+      //.state('songs.show', {
+      //  url: '/:id',
+      //  templateUrl: 'views/song.html',
+      //  controller: 'SongsCtrl',
+      //  resolve: { 
+      //    song:  function ($stateParams, SongsService) {
+      //      return SongsService.getSong($stateParams.id);
+      //    }
+      //  }
+      //})
       .state('settings', {
         url: '/settings',
         templateUrl: 'views/settings.html',
