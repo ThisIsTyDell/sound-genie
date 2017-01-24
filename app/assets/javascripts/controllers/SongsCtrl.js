@@ -2,14 +2,14 @@ function SongsCtrl(SongsService) {
   var ctrl = this;
 
   ctrl.songs = [];
-  ctrl.song = [];
+  //ctrl.song = [];
 
   ctrl.toggle = function() {
     ctrl.toggleUpload = !ctrl.toggleUpload
   };
 
   SongsService
-   .getSongs()
+    .getSongs()
     .then(function(res) {
       ctrl.songs = res.data
     });
