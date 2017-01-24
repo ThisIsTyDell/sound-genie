@@ -20,12 +20,24 @@
     </div>
   </div>
 
-  <div class="col-md-3">                        
-    <a href="#" class="tile tile-info">
+  <div class="col-md-3">
+  <form action="/your-server-side-code" method="POST">                        
+    <button class="tile tile-info">
         $25 Credits
-        <p>Bulk Options Available</p>                            
+        <!-- <p>Bulk Options Available</p> -->
+        
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_4gRfUISDt7R9oAENOSlMNfft"
+            data-amount="2500"
+            data-name="Sound Genie"
+            data-description="Credits for Mastering Service"
+            data-locale="auto">
+          </script>
+                                   
         <div class="informer informer-default"><span class="fa fa-shopping-cart"></span></div>
-    </a>                        
+    </button>  
+    </form>                       
   </div>
 
   <div class="col-md-3">                        
