@@ -1,28 +1,34 @@
-# README
+# SoundGenie README
 
-sound-genie
-
+## Description
 Mix and Mastering Management, Payment, and Delivery App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For more detail, check this blog post. http://tydellmiller.com/2017/01/24/creating_a_single_page_app_rails_api_for_angularjs/
 
-Things you may want to cover:
+## Walkthrough Video
+https://www.youtube.com/watch?v=v7KFJxBXt-Y
 
-* Ruby version
+## Installation
+  To install a copy of this project fork and clone this repository.
 
-* System dependencies
+  In your terminal run `bundle install` to install gems.
 
-* Configuration
+  Next run `rake db:migrate` to create the database.
 
-* Database creation
+  Finally run `rails s` to start up the server and visit localhost:3000 in your browser.
 
-* Database initialization
+  This project utilizes 
+     "angular": "v1.5.8", 
+     "angular-ui-router": "latest",
+     "angular-devise": "latest"
 
-* How to run the test suite
+## Requirements
+  Payments
+  
+  This app uses the Stripe API to allow payments, you will need to use your own Stripe development account and API Auth Key in order to use the payment feature. (Optionally, you may use a different payment provider - but this app comes with Stripe built in!)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributions
+Contributions to this project are welcome. To contribute to this project, please fork and clone this repository. Then open a pull request once you are ready to submit changes or improvements. 
 
-* Deployment instructions
-
-* ...
+## License
+https://github.com/ThisIsTyDell/sound-genie/blob/master/LICENSE
