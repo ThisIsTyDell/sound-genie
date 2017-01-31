@@ -5,7 +5,7 @@ function AuthCtrl($scope, $rootScope, Auth, $state){
    Auth.register($scope.user, config).then(function(user){
      $rootScope.user = user
      alert("Thanks for signing up, " + user.username);
-     $state.go('settings.profile');
+     $state.go('welcome');
    }, function(response){
      alert(response.data.error)
    });
