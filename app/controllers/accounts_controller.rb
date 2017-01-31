@@ -5,8 +5,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    account = Account.find_by(user_id: current_user.id)
-    account.create(params[:AccountCtrl])
+    current_user.create_account(post_params)
   end
 
   def update
