@@ -17,6 +17,10 @@ function AccountCtrl(AccountService) {
   ctrl.submit = function() {
     AccountService.updateAccount(ctrl)
   }
+
+  ctrl.newSubmit = function() {
+    AccountService.createAccount(ctrl)
+  }
 }
 
 angular

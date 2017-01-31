@@ -1,0 +1,108 @@
+<h2>New Profile</h2>
+
+<div class="row" ng-controller="AccountCtrl as account">
+  <div class="col-md-12">
+
+    <form class="form-horizontal" name="form" ng-submit="account.newSubmit()">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>User</strong>Information for: {{account.first_name}} {{account.last_name}}</h3>
+          <ul class="panel-controls">
+            <li><a ui-sref="settings" class="panel-remove"><span class="fa fa-times"></span></a></li>
+          </ul>
+        </div>
+
+        <div class="panel-body">
+          <p>Please enter your information here</p>
+        </div>
+
+        <div class="panel-body">
+
+
+          <div class="form-group">
+              <label class="col-md-3 col-xs-12 control-label">First Name</label>
+              <div class="col-md-6 col-xs-12">                                            
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+            
+                  <input type="text" class="form-control" name="first_name" minlength="3" maxlength="20" required="required" ng-model="account.first_name" />
+
+                </div>                                            
+                <span class="help-block">or Artist Name</span>
+
+                <div ng-if="form.first_name.$touched">
+                  <div ng-if="form.first_name.$error.required">
+                      First name is required!
+                  </div>
+                  <div ng-if="form.first_name.$error.minlength">
+                      First name must be more than 3 characters!
+                  </div>
+                  <div ng-if="form.first_name.$error.maxlength">
+                      First name must be less than 20 characters!
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="form-group">
+              <label class="col-md-3 col-xs-12 control-label">Last Name</label>
+              <div class="col-md-6 col-xs-12">                                            
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                  <input type="text" class="form-control" name="last_name" minlength="3" maxlength="20" required="required" ng-model="account.last_name" />
+                </div>                                            
+                <span class="help-block">or Artist Name</span>
+                <div ng-if="form.last_name.$touched">
+                  <div ng-if="form.last_name.$error.required">
+                      Last name is required!
+                  </div>
+                  <div ng-if="form.last_name.$error.minlength">
+                      Last name must be more than 3 characters!
+                  </div>
+                  <div ng-if="form.last_name.$error.maxlength">
+                      Last name must be less than 20 characters!
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Label Name</label>
+            <div class="col-md-6 col-xs-12">                                            
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                <input type="text" class="form-control" name="label_name" minlength="3" maxlength="30" required="required" ng-model="account.label_name" />
+              </div>                                            
+              <span class="help-block"></span>
+              <div ng-if="form.label_name.$touched">
+                  <div ng-if="form.label_name.$error.required">
+                      Label name is required!
+                  </div>
+                  <div ng-if="form.label_name.$error.minlength">
+                      Label name must be more than 3 characters!
+                  </div>
+                  <div ng-if="form.label_name.$error.maxlength">
+                      Label name must be less than 20 characters!
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-3 col-xs-12 control-label">Avatar</label>
+            <div class="col-md-6 col-xs-12">
+              <input type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"/>
+              <span class="help-block">Select a profile or label image</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-default">Clear Form</button>                                    
+          <button class="btn btn-primary pull-right">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
