@@ -27,6 +27,11 @@ angular
           })
         }
       })
+      .state('welcome', {
+        url: '/welcome',
+        templateUrl: 'views/new_profile.html',
+        controller: 'AccountCtrl'
+      })
       .state('songs', {
         url: '/songs',
         templateUrl: 'views/songs.html',
