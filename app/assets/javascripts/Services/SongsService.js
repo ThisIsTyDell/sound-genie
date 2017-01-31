@@ -4,7 +4,7 @@ function SongsService($http) {
   }
 
   this.getSong = function(id) {
-    return $http.get('songs/' + id).then(function(){console.log("i love you")});
+    return $http.get('songs/' + id)
   }
 
   this.createSong = function(ctrl) {

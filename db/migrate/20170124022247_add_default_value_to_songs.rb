@@ -1,0 +1,5 @@
+class AddDefaultValueToSongs < ActiveRecord::Migration[5.0]
+  def change
+    change_column_default :songs, :complete, false
+  end
+end
