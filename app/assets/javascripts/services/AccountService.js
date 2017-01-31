@@ -5,7 +5,7 @@ function AccountService($http, $timeout) {
       return $http.get('accounts/show')
     },
     createAccount: function(ctrl) {
-      return $http.post('accounts/create'), { data: ctrl })
+      return $http.post('accounts/create', { data: ctrl })
     },
     updateAccount: function(ctrl) {
       return $http.patch('accounts/update', { data: ctrl })
