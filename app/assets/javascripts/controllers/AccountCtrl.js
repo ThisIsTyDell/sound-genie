@@ -15,8 +15,11 @@ function AccountCtrl(AccountService) {
     });
 
   ctrl.submit = function() {
-    AccountService
-      .updateAccount(ctrl)
+    if (ctrl.first_name == '') {
+      AccountService.createAccount(ctrl)
+    } else {
+      AccountService.updateAccount(ctrl)
+    }
   }
 }
 
